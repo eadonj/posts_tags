@@ -1,0 +1,11 @@
+<div id="edit">
+  <div id="new_post">Ditty this post!</div>
+  <form action="/posts" method="post">
+    <input type="hidden" name="_method" value="put">
+    <input type="hidden" name="id" value=<%=@post.id%>>
+    <textarea rows="1" cols="25" name="post[title]"><%=@post.title%></textarea>
+    <textarea rows="6" cols="25" name="post[description]"><%=@post.description%></textarea>
+
+    <input type="submit" value="post this ditty">
+  </form>
+</div>
